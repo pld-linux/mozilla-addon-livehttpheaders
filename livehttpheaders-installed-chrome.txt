@@ -1,0 +1,4 @@
+content,install,url,jar:resource:/chrome/livehttpheaders.jar!/content/
+skin,install,url,jar:resource:/chrome/livehttpheaders.jar!/skin/
+locale,install,url,jar:resource:/chrome/livehttpheaders.jar!/locale/en-US/livehttpheaders/
+locale,install,url,jar:resource:/chrome/livehttpheaders.jar!/locale/fr-FR/livehttpheaders/
