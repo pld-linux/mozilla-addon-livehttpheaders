@@ -1,6 +1,6 @@
 %define		_realname	livehttpheaders
 Summary:	Show information about the HTTP headers
-Summary(pl):	Poka¿ informacje o nag³ówkach HTTP
+Summary(pl):	Pokazywanie informacji o nag³ówkach HTTP
 Name:		mozilla-addon-%{_realname}
 Version:	0.7
 Release:	1
@@ -25,23 +25,38 @@ in two ways:
 * First by adding a 'Headers' tab in 'View Page Info' of a web page.
 
 * Second by adding a tool in the 'Tools->Web Development' menu to
-  be able to display http headers in real time (while pages are being
+  be able to display HTTP headers in real time (while pages are being
   downloaded from the Internet.
 
 * Third by letting you edit request headers and replay an URL (beta).
   Look for the Replay button in the live window!
 
+%description -l pl
+Celem tego projektu jest dodanie informacji o nag³ówkach HTTP na dwa
+sposoby:
+
+- po pierwsze przez dodanie panelu "Headers" w opcji "Poka¿ informacje
+  o stronie"
+
+- po drugie przez dodanie narzêdzia w menu "Narzêdzia->Narzêdzia
+  programistyczne", umo¿liwiaj±cego wy¶wietlanie nag³ówków HTTP w
+  czasie rzeczywistym (podczas ¶ci±gania stron z Internetu)
+
+- po trzecie przez pozwolenie na edycjê nag³ówków ¿±dañ i ponowne
+  otworzenie URL-a (w stadium beta). Przycisk Replay mo¿na znale¼æ w
+  okienku.
+
 %prep
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_chromedir}/icons/default/
+install -d $RPM_BUILD_ROOT%{_chromedir}/icons/default
 
 unzip %{SOURCE0} -d $RPM_BUILD_ROOT%{_chromedir}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_chromedir}
 
-mv $RPM_BUILD_ROOT%{_chromedir}/*.xpm $RPM_BUILD_ROOT%{_chromedir}/icons/default/
-mv $RPM_BUILD_ROOT%{_chromedir}/*.ico $RPM_BUILD_ROOT%{_chromedir}/icons/default/
+mv $RPM_BUILD_ROOT%{_chromedir}/*.xpm $RPM_BUILD_ROOT%{_chromedir}/icons/default
+mv $RPM_BUILD_ROOT%{_chromedir}/*.ico $RPM_BUILD_ROOT%{_chromedir}/icons/default
 
 %clean
 rm -rf $RPM_BUILD_ROOT
