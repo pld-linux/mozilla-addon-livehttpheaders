@@ -3,7 +3,7 @@ Summary:	Show information about the HTTP headers
 Summary(pl):	Pokazywanie informacji o nag³ówkach HTTP
 Name:		mozilla-addon-%{_realname}
 Version:	0.8
-Release:	1
+Release:	2
 License:	?
 Group:		X11/Applications/Networking
 Source0:	http://download.mozdev.org/%{_realname}/%{_realname}-%{version}.xpi
@@ -16,7 +16,7 @@ Requires:	mozilla >= 1.0-7
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{_realname}-%{version}-root-%(id -u -n)
 
-%define         _chromedir      %{_libdir}/mozilla/chrome
+%define         _chromedir      %{_datadir}/mozilla/chrome
 
 %description
 The goal of this project is to adds information about the HTTP headers
