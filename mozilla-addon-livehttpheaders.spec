@@ -2,12 +2,12 @@
 Summary:	Show information about the HTTP headers
 Summary(pl):	Pokazywanie informacji o nag³ówkach HTTP
 Name:		mozilla-addon-%{_realname}
-Version:	0.9
-Release:	3
+Version:	0.10
+Release:	1
 License:	GPL
 Group:		X11/Applications/Networking
 Source0:	http://download.mozdev.org/livehttpheaders/%{_realname}-%{version}.xpi
-# Source0-md5:	156444d6a43d9d6ed1785e4f92f6fc9c
+# Source0-md5:	f86f03ed6098c4581412f312b5a18ccf
 Source1:	%{_realname}-installed-chrome.txt
 URL:		http://livehttpheaders.mozdev.org/
 BuildRequires:	unzip
