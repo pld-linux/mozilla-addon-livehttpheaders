@@ -2,12 +2,12 @@
 Summary:	Show information about the HTTP headers
 Summary(pl):	Pokazywanie informacji o nag³ówkach HTTP
 Name:		mozilla-addon-%{_realname}
-Version:	0.7
+Version:	0.8
 Release:	1
 License:	?
 Group:		X11/Applications/Networking
-Source0:	http://%{_realname}.mozdev.org/%{_realname}-%{version}.xpi
-# Source0-md5:	57b82903c7a844b37c8cbbb1359fb708
+Source0:	http://download.mozdev.org/%{_realname}/%{_realname}-%{version}.xpi
+# Source0-md5:	011429eadb015aaa38662c7c37c76f72
 Source1:	%{_realname}-installed-chrome.txt
 URL:		http://%{_realname}.mozdev.org/
 BuildRequires:	unzip
