@@ -2,14 +2,14 @@
 Summary:	Show information about the HTTP headers
 Summary(pl):	Pokazywanie informacji o nag³ówkach HTTP
 Name:		mozilla-addon-%{_realname}
-Version:	0.8
+Version:	0.9
 Release:	2
-License:	?
+License:	GPL
 Group:		X11/Applications/Networking
 Source0:	http://download.mozdev.org/%{_realname}/%{_realname}-%{version}.xpi
-# Source0-md5:	011429eadb015aaa38662c7c37c76f72
+# Source0-md5:	156444d6a43d9d6ed1785e4f92f6fc9c
 Source1:	%{_realname}-installed-chrome.txt
-URL:		http://%{_realname}.mozdev.org/
+URL:		http://livehttpheaders.mozdev.org/
 BuildRequires:	unzip
 Requires(post,postun):	textutils
 Requires:	mozilla >= 1.0-7
@@ -50,13 +50,10 @@ sposoby:
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_chromedir}/icons/default
+install -d $RPM_BUILD_ROOT%{_chromedir}
 
 unzip %{SOURCE0} -d $RPM_BUILD_ROOT%{_chromedir}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_chromedir}
-
-mv $RPM_BUILD_ROOT%{_chromedir}/*.xpm $RPM_BUILD_ROOT%{_chromedir}/icons/default
-mv $RPM_BUILD_ROOT%{_chromedir}/*.ico $RPM_BUILD_ROOT%{_chromedir}/icons/default
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -72,6 +69,4 @@ cat %{_chromedir}/*-installed-chrome.txt >%{_chromedir}/installed-chrome.txt
 %files
 %defattr(644,root,root,755)
 %doc $RPM_BUILD_ROOT%{_chromedir}/TODO.txt
-%{_chromedir}/%{_realname}.jar
-%{_chromedir}/*-installed-chrome.txt
-%{_chromedir}/icons/default/*
+%{_chromedir}/*
