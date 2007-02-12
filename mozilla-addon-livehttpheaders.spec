@@ -1,6 +1,6 @@
 %define		_realname	livehttpheaders
 Summary:	Show information about the HTTP headers
-Summary(pl):	Pokazywanie informacji o nag³ówkach HTTP
+Summary(pl.UTF-8):   Pokazywanie informacji o nagÅ‚Ã³wkach HTTP
 Name:		mozilla-addon-%{_realname}
 Version:	0.10
 Release:	1
@@ -32,19 +32,19 @@ in two ways:
 * Third by letting you edit request headers and replay an URL (beta).
   Look for the Replay button in the live window!
 
-%description -l pl
-Celem tego projektu jest dodanie informacji o nag³ówkach HTTP na dwa
+%description -l pl.UTF-8
+Celem tego projektu jest dodanie informacji o nagÅ‚Ã³wkach HTTP na dwa
 sposoby:
 
-- po pierwsze przez dodanie panelu "Headers" w opcji "Poka¿ informacje
+- po pierwsze przez dodanie panelu "Headers" w opcji "PokaÅ¼ informacje
   o stronie"
 
-- po drugie przez dodanie narzêdzia w menu "Narzêdzia->Narzêdzia
-  programistyczne", umo¿liwiaj±cego wy¶wietlanie nag³ówków HTTP w
-  czasie rzeczywistym (podczas ¶ci±gania stron z Internetu)
+- po drugie przez dodanie narzÄ™dzia w menu "NarzÄ™dzia->NarzÄ™dzia
+  programistyczne", umoÅ¼liwiajÄ…cego wyÅ›wietlanie nagÅ‚Ã³wkÃ³w HTTP w
+  czasie rzeczywistym (podczas Å›ciÄ…gania stron z Internetu)
 
-- po trzecie przez pozwolenie na edycjê nag³ówków ¿±dañ i ponowne
-  otworzenie URL-a (w stadium beta). Przycisk Replay mo¿na znale¼æ w
+- po trzecie przez pozwolenie na edycjÄ™ nagÅ‚Ã³wkÃ³w Å¼Ä…daÅ„ i ponowne
+  otworzenie URL-a (w stadium beta). Przycisk Replay moÅ¼na znaleÅºÄ‡ w
   okienku.
 
 %prep
