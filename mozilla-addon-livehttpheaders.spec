@@ -1,6 +1,6 @@
 %define		_realname	livehttpheaders
 Summary:	Show information about the HTTP headers
-Summary(pl.UTF-8):   Pokazywanie informacji o nagłówkach HTTP
+Summary(pl.UTF-8):	Pokazywanie informacji o nagłówkach HTTP
 Name:		mozilla-addon-%{_realname}
 Version:	0.10
 Release:	1
