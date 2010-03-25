@@ -23,13 +23,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 The goal of this project is to adds information about the HTTP headers
 in two ways:
 
-* First by adding a 'Headers' tab in 'View Page Info' of a web page.
+- First by adding a 'Headers' tab in 'View Page Info' of a web page.
 
-* Second by adding a tool in the 'Tools->Web Development' menu to
-  be able to display HTTP headers in real time (while pages are being
+- Second by adding a tool in the 'Tools->Web Development' menu to be
+  able to display HTTP headers in real time (while pages are being
   downloaded from the Internet.
 
-* Third by letting you edit request headers and replay an URL (beta).
+- Third by letting you edit request headers and replay an URL (beta).
   Look for the Replay button in the live window!
 
 %description -l pl.UTF-8
@@ -40,8 +40,8 @@ sposoby:
   o stronie"
 
 - po drugie przez dodanie narzędzia w menu "Narzędzia->Narzędzia
-  programistyczne", umożliwiającego wyświetlanie nagłówków HTTP w
-  czasie rzeczywistym (podczas ściągania stron z Internetu)
+  programistyczne", umożliwiającego wyświetlanie nagłówków HTTP w czasie
+  rzeczywistym (podczas ściągania stron z Internetu)
 
 - po trzecie przez pozwolenie na edycję nagłówków żądań i ponowne
   otworzenie URL-a (w stadium beta). Przycisk Replay można znaleźć w
@@ -60,10 +60,12 @@ install %{SOURCE1} $RPM_BUILD_ROOT%{_chromedir}
 rm -rf $RPM_BUILD_ROOT
 
 %post
-%{_sbindir}/mozilla-chrome+xpcom-generate
+if [ "$1" = 1 ]; then
+	%{_sbindir}/mozilla-chrome+xpcom-generate
+fi
 
 %postun
-%{_sbindir}/mozilla-chrome+xpcom-generate
+[ ! -x %{_sbindir}/mozilla-chrome+xpcom-generate ] || %{_sbindir}/mozilla-chrome+xpcom-generate
 
 %files
 %defattr(644,root,root,755)
